@@ -102,7 +102,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden">
       <BackgroundGradientAnimation
         gradientBackgroundStart="rgba(245, 243, 239, 1)"
         gradientBackgroundEnd="rgba(188, 199, 203, 0.4)"
@@ -114,7 +114,7 @@ const Hero = () => {
         pointerColor="8, 96, 126"
         containerClassName="min-h-screen w-full"
       >
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-12 items-center relative z-20 min-h-screen pt-28 pb-8 md:py-0">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-12 items-center relative z-20 min-h-[100dvh] pt-32 pb-16 md:py-0">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -450,12 +450,11 @@ const NovidadePopup = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
             >
               <X className="w-4 h-4" />
             </button>
-            
-            <div className="absolute -top-4 -left-4 bg-red-500 text-white text-[11px] font-extrabold px-5 py-2 rounded-full animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.6)] z-50 border border-red-400">
-              NOVIDADE!
-            </div>
 
-            <div className="rounded-2xl overflow-hidden mb-6 border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.8)] mt-2 relative">
+            <div className="rounded-2xl overflow-hidden mb-6 border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.8)] mt-6 md:mt-2 relative">
+              <div className="absolute top-4 left-4 bg-red-500 text-white text-[11px] font-extrabold px-5 py-2 rounded-full animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.6)] z-50 border border-red-400">
+                NOVIDADE!
+              </div>
               <img 
                 src="/formulario do simposio.png" 
                 alt="Formulário do Simpósio" 
