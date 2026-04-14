@@ -1,20 +1,47 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LiTCC USP-RP
 
-# Run and deploy your AI Studio app
+> **Liga de Terapias Cognitivo-Comportamentais da USP Ribeirão Preto**
 
-This contains everything you need to run your app locally.
+Aplicação web estruturada em **React** e **Vite**, desenvolvida com foco em performance e segurança, com implantação otimizada para a Vercel.
 
-View your app in AI Studio: https://ai.studio/apps/2db48215-4262-4ed3-8851-cd5cafb06517
+## 🚀 Tecnologias
 
-## Run Locally
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) (Animações)
+- [Lucide React](https://lucide.dev/) (Ícones)
 
-**Prerequisites:**  Node.js
+## 💻 Instalação / Local
 
+Siga os passos abaixo para rodar esta aplicação na sua máquina:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Clone o repositório:
+```bash
+git clone https://github.com/leumasnot-prog/litccusp.git
+```
+
+2. Entre no diretório do projeto:
+```bash
+cd litccusp
+```
+
+3. Instale as dependências:
+```bash
+npm install
+```
+
+4. *(Opcional)* Crie um arquivo `.env` baseado no `.env.example`.
+
+5. Rode a aplicação localmente:
+```bash
+npm run dev
+```
+
+## 🛡️ Camadas de Segurança e Deploy (Vercel)
+
+O ambiente de produção deste projeto possui regras explícitas em `vercel.json` para proteger o sistema:
+- **CSP (Content-Security-Policy)**
+- **HSTS (Strict-Transport-Security)** (HTTPS Forçado)
+- **X-Frame-Options & nosniff** (Proteções contra sequestro de tela e injeção por mime-type)
+- Cache estático otimizado pelas redes Edge.
