@@ -19,13 +19,18 @@ const InstagramMockup = () => {
   return (
     <div className="mx-auto w-fit" style={{ perspective: "1500px" }}>
       <div 
-        className="relative group w-[340px] sm:w-[360px] h-[720px] border-[8px] border-zinc-900 rounded-[3.2rem] overflow-hidden shadow-2xl shadow-black/30 bg-white ring-[6px] ring-zinc-800/10 transition-transform duration-700 ease-out hover:[transform:rotateX(5deg)_rotateY(-15deg)_translateY(-20px)_scale(1.02)] hover:shadow-[30px_50px_80px_-20px_rgba(0,0,0,0.5)] cursor-pointer"
-        style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' }}
+        className="relative group w-[340px] sm:w-[360px] h-[720px] border-[8px] border-zinc-900 rounded-[3.2rem] overflow-hidden shadow-2xl shadow-black/30 ring-[6px] ring-zinc-800/10 transition-transform duration-700 ease-out hover:[transform:rotateX(5deg)_rotateY(-15deg)_translateY(-20px)_scale(1.02)] hover:shadow-[30px_50px_80px_-20px_rgba(0,0,0,0.5)] cursor-pointer"
+        style={{ 
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+          WebkitMaskImage: '-webkit-radial-gradient(white, black)'
+        }}
       >
-        {/* Dynamic 3D Shine Overlay */}
-        <div className="pointer-events-none absolute inset-0 z-50 bg-gradient-to-tr from-transparent via-transparent to-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
+        {/* Inner clip wrapper to prevent border bleed */}
+        <div className="absolute inset-0 bg-white rounded-[2.6rem] overflow-hidden">
+          {/* Dynamic 3D Shine Overlay */}
+          <div className="pointer-events-none absolute inset-0 z-50 bg-gradient-to-tr from-transparent via-transparent to-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
 
-      {/* Notch / Dynamic Island */}
+        {/* Notch / Dynamic Island */}
       <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-[110px] h-[30px] bg-black rounded-[18px] z-50 shadow-[inset_0_-2px_4px_rgba(255,255,255,0.2)]" />
 
       {/* iOS Status Bar */}
@@ -149,8 +154,9 @@ const InstagramMockup = () => {
         <svg className="w-[26px] h-[26px] text-black" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4"></path></svg>
         <Clapperboard className="w-[26px] h-[26px] text-gray-400" strokeWidth={2} />
         <div className="w-7 h-7 rounded-full border-[1.5px] border-black overflow-hidden bg-gray-100">
-           <img src="/logo.png" alt="Profile" className="w-full h-full object-contain bg-white" />
+          <img src="/logo.png" alt="Profile" className="w-full h-full object-contain bg-white" />
         </div>
+      </div>
       </div>
     </div>
     </div>
