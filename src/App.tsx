@@ -471,7 +471,7 @@ const NovidadePopup = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
                 IV Simpósio da LiTCC
               </h3>
               <p className="text-sm text-neutral-300">
-                Acesse agora para garantir sua vaga e participe do maior evento presencial da Liga de TCC neste campus.
+                Acesse agora para garantir sua vaga no maior evento presencial da LiTCC!
               </p>
             </div>
 
