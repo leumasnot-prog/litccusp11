@@ -387,10 +387,10 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/litcc.usp?igsh=MWtxc2UzdjRpcG93eQ==" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="https://m.youtube.com/@ligadeterapiascognitivo-co3123?fbclid=PAZnRzaARLMd1leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaem3KD9Q_CT0WYtxfycdaPWvJrxeQezvMWr57BIf8J2XEbp2O-3vJDWe8v2tg_aem_n-7CQKFgB2tI8MUBGC_blA" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-600 transition-colors"><Youtube className="w-5 h-5" /></a>
-              <a href="https://chat.whatsapp.com/EAOs277dhmhIcTyOxS0ARR" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 transition-colors"><MessageCircle className="w-5 h-5" /></a>
-              <a href="mailto:litcc.usp@gmail.com" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-litcc-teal transition-colors"><Mail className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/litcc.usp?igsh=MWtxc2UzdjRpcG93eQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LiTCC USP" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://m.youtube.com/@ligadeterapiascognitivo-co3123?fbclid=PAZnRzaARLMd1leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaem3KD9Q_CT0WYtxfycdaPWvJrxeQezvMWr57BIf8J2XEbp2O-3vJDWe8v2tg_aem_n-7CQKFgB2tI8MUBGC_blA" target="_blank" rel="noopener noreferrer" aria-label="YouTube da LiTCC USP" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-600 transition-colors"><Youtube className="w-5 h-5" /></a>
+              <a href="https://chat.whatsapp.com/EAOs277dhmhIcTyOxS0ARR" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da LiTCC USP" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 transition-colors"><MessageCircle className="w-5 h-5" /></a>
+              <a href="mailto:litcc.usp@gmail.com" aria-label="E-mail da LiTCC USP" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-litcc-teal transition-colors"><Mail className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -406,7 +406,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Institucional</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="https://www.ffclrp.usp.br/" target="_blank" className="hover:text-white transition-colors flex items-center gap-2">FFCLRP-USP <ExternalLink className="w-3 h-3" /></a></li>
+              <li><a href="https://www.ffclrp.usp.br/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">FFCLRP-USP <ExternalLink className="w-3 h-3" /></a></li>
               <li><a href="#" className="hover:text-white transition-colors">LaPPIC</a></li>
             </ul>
           </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://litccusp11.vercel.app/sitemap.xml

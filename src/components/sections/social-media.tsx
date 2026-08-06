@@ -189,6 +189,7 @@ export function SocialMedia() {
             <a 
               href="https://www.instagram.com/litcc.usp?igsh=MWtxc2UzdjRpcG93eQ==" 
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all group"
             >
               Seguir @litcc.usp
