@@ -25,7 +25,6 @@ import {
 import { BackgroundGradientAnimation } from './components/ui/background-gradient-animation';
 import { AreasBento } from './components/sections/areas-bento';
 import { SocialMedia } from './components/sections/social-media';
-import { Simposio } from './components/sections/simposio';
 
 // --- Components ---
 
@@ -42,7 +41,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Quem Somos', href: '#quem-somos' },
-    { name: 'Simpósio', href: '#simposio' },
     { name: 'Áreas', href: '#areas' },
     { name: 'Contato', href: '#contato' },
   ];
@@ -426,91 +424,14 @@ const Footer = () => {
   );
 };
 
-// --- Popup ---
-const NovidadePopup = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto"
-        >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-[0_0_80px_rgba(86,3,92,0.5)] max-w-lg w-full relative my-auto max-h-[95vh] overflow-y-auto scrollbar-hide"
-          >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-red-500 transition-colors text-white z-50 shadow-lg"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="rounded-2xl overflow-hidden mb-6 border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.8)] mt-6 md:mt-2 relative">
-              <div className="absolute top-4 left-4 bg-red-500 text-white text-[11px] font-extrabold px-5 py-2 rounded-full animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.6)] z-50 border border-red-400">
-                NOVIDADE!
-              </div>
-              <img 
-                src="/formulario do simposio.png" 
-                alt="Formulário do Simpósio" 
-                className="w-full h-auto max-h-[350px] object-cover object-top hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-4 text-white font-bold text-lg drop-shadow-lg">
-                Inscrições Abertas!
-              </div>
-            </div>
-
-            <div className="text-center text-white mb-6">
-              <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#8ce0ff] to-[#e98aff]">
-                IV Simpósio da LiTCC
-              </h3>
-              <p className="text-sm text-neutral-300">
-                Acesse agora para garantir sua vaga no maior evento presencial da LiTCC!
-              </p>
-            </div>
-
-            <div className="flex gap-4">
-              <button
-                onClick={onClose}
-                className="flex-1 px-4 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-colors text-sm"
-              >
-                Agora Não
-              </button>
-              <a
-                href="https://forms.gle/p5VZAH7hTCxsCXvw8"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={onClose}
-                className="flex-1 px-4 py-3 rounded-full bg-gradient-to-r from-[#08607e] to-[#56035c] text-white font-bold shadow-lg hover:shadow-[0_0_30px_rgba(86,3,92,0.6)] hover:scale-105 transition-all text-center text-sm flex justify-center items-center gap-2"
-              >
-                Garantir Vaga <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
 // --- Main App ---
 
 export default function App() {
-  const [showPopup, setShowPopup] = useState(true);
-
   return (
     <div className="min-h-screen selection:bg-litcc-teal selection:text-white">
-      <NovidadePopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
       <Navbar />
       <main>
         <Hero />
-        <Simposio />
         <QuemSomos />
         <AreasBento />
         {/* <Projetos /> */}

@@ -35,7 +35,7 @@ Abaixo estão detalhadas todas as seções (blocos) em ordem de aparição de ro
 ### 4. Áreas de Atuação (`<AreasBento />` em `./components/sections/`)
 - **Função:** Organizar os nichos de atuação da LiTCC (exigência central do usuário refatorada usando estética futurista).
 - **Comportamento e Design:** Esse bloco abandona os botões clássicos para aplicar o visual em **Bento Grid** moderno (uma malha de caixas modulares de formatos retangulares e quadrados).
-- **Frentes Atuais Expostas:** **Ensino, Pesquisa, Eventos, Extensão e Marketing**.
+- **Frentes Atuais Expostas:** **Ensino, Pesquisa, Extensão, Eventos, Marketing e Administração**.
 - **Visualização Exclusiva:** As imagens de fundo antigas foram abandonadas em prol de efeitos coloridos, onde "nuvens neon" de borrões iluminam os ícones baseados na paleta da Liga, acionadas fisicamente através do ponteiro interativo (Mouse/Hover).
 
 ### 5. Atividades e Filtros (`<Projetos />`)
