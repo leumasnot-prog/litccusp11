@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://litccusp11.vercel.app/sitemap.xml
+Sitemap: https://www.litcc.com.br/sitemap.xml
